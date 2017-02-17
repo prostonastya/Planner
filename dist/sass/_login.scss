@@ -1,10 +1,8 @@
 @import "custom-variables";
 
-body{	
+.wrap{	
 	background: url('../img/login-bg.jpg') no-repeat;
 	background-size: cover;
-}
-.wrap{	
 	.flex-container{	
 		// не могу выровнять блок 
 		// width: 100%;
@@ -13,7 +11,7 @@ body{
 		// top: 0;
 		// left: 0;
 		justify-content: center;		
-		// align-items: center;
+		align-items: center;
 		// overflow: auto;
 	}
 }
@@ -32,8 +30,8 @@ body{
 	.log-icon{
 		font-size: 3em;
 		width: 30px;
-		color: #fff;
-		background: #a0a0a0;				
+		// color: #fff;
+		// background: #a0a0a0;				
 	}
 	input{	
 		font-size: 1.8em;	

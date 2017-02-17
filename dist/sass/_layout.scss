@@ -85,6 +85,16 @@ main{
 }
 .all-task-wrap{
 	padding: 4em 0;
+	position: relative;
+	&::before{
+		content: '';
+		display: inline-block;
+		border: 2px dashed $generalColor;
+		position: absolute;
+		top: 4em;
+		left: 1.8em;
+		bottom: 0;
+	}
 }
 .task{
 	width: 100%;
@@ -192,5 +202,107 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
 
+// overlay
+.overlay{	
+	background-color: rgba(0,0,0,0.83);
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.edit-task{
+	background-color: #FFF;
+	width: 100%;
+	padding: 5em 0;
+	height: auto;
+	z-index: 999999;
+	position: fixed;
+	bottom: 0;
+	@media (min-width: 1024px){
+		min-height: 50vh;
+		}
+	@media (max-height: 630px){
+		top: 0;
+		overflow: auto;
+		}
+	.input-group{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		&.flex-container{
+			flex-direction: column;
+			@media (min-width: 1024px){
+			flex-direction: row;
+			}			
+		}
+	}
+	.title{
+		font-size: 1.8em;
+		color: #767676;
+		margin-bottom: 4em;
+	}
+	.icon-bell{
+		font-size: 2em;
+		color: $generalColor;
+		margin-right: 1.3em;
+	}
+	.task-bell{
+		display: flex;
+		align-items: center;
+		font-size: 1.6em;
+		color: #404040;
+	}
+	input{
+		font-size: 3em;
+		margin-top: 2em;
+		padding-left: 2.3em;
+		@media (min-width: 1024px){
+			margin-top: 0;
+			margin-left: 2em;
+			padding-left: 0;
+		}
+	}
+	.textarea-wrap{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		label{
+			font-size: 1.4em;
+			color: #424242;
+			order: 1;
+		}
+		textarea{
+			order: 2;
+			border-bottom: 1px solid #9d9d9d;
+			width: 100%;
+			min-height: 6em;
+			// zadat fz, peres4 em, 60px
+			&:focus{
+				border-color: $generalColor;
+				&+label{
+				color: $generalColor;
+				}
+			}
+		}
+		.symbol-count{
+			order: 3;
+			align-self: flex-end;
+			// margin-top: 
+		}		
+	}
+	.add-task-btn{
+		background: $generalColor;
+		padding: 2em;
+		// proverit
+		color: #fff;
+		width: 100%;
+		@media (min-width: 1024px){
+			width: auto;
+			align-self: flex-end;
+		}
+	}
 }

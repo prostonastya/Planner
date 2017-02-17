@@ -27,64 +27,64 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == account_circle-blue {
+	@if $filename == cancel {
 		$char: "\E001";
 	}
-	@if $filename == account_circle-grey {
+	@if $filename == check {
 		$char: "\E002";
 	}
-	@if $filename == add {
+	@if $filename == check_box {
 		$char: "\E003";
 	}
-	@if $filename == arrow {
+	@if $filename == check_box_outline {
 		$char: "\E004";
 	}
-	@if $filename == bell-not_active {
+	@if $filename == edit {
 		$char: "\E005";
 	}
-	@if $filename == bell {
+	@if $filename == edit-not_active {
 		$char: "\E006";
 	}
-	@if $filename == cancel {
+	@if $filename == list {
 		$char: "\E007";
 	}
-	@if $filename == check {
+	@if $filename == lock-blue {
 		$char: "\E008";
 	}
-	@if $filename == check_box {
+	@if $filename == lock-grey {
 		$char: "\E009";
 	}
-	@if $filename == check_box_outline {
+	@if $filename == logout {
 		$char: "\E00A";
 	}
-	@if $filename == edit-not_active {
+	@if $filename == star {
 		$char: "\E00B";
 	}
-	@if $filename == edit {
+	@if $filename == time {
 		$char: "\E00C";
 	}
-	@if $filename == list {
+	@if $filename == user {
 		$char: "\E00D";
 	}
-	@if $filename == lock-blue {
+	@if $filename == warning {
 		$char: "\E00E";
 	}
-	@if $filename == lock-grey {
+	@if $filename == account_circle-blue {
 		$char: "\E00F";
 	}
-	@if $filename == logout {
+	@if $filename == account_circle-grey {
 		$char: "\E010";
 	}
-	@if $filename == star {
+	@if $filename == add {
 		$char: "\E011";
 	}
-	@if $filename == time {
+	@if $filename == arrow {
 		$char: "\E012";
 	}
-	@if $filename == user {
+	@if $filename == bell {
 		$char: "\E013";
 	}
-	@if $filename == warning {
+	@if $filename == bell-not_active {
 		$char: "\E014";
 	}
 
@@ -102,24 +102,6 @@
 	}
 }
 
-.icon-account_circle-blue {
-	@include icon(account_circle-blue);
-}
-.icon-account_circle-grey {
-	@include icon(account_circle-grey);
-}
-.icon-add {
-	@include icon(add);
-}
-.icon-arrow {
-	@include icon(arrow);
-}
-.icon-bell-not_active {
-	@include icon(bell-not_active);
-}
-.icon-bell {
-	@include icon(bell);
-}
 .icon-cancel {
 	@include icon(cancel);
 }
@@ -132,11 +114,11 @@
 .icon-check_box_outline {
 	@include icon(check_box_outline);
 }
-.icon-edit-not_active {
-	@include icon(edit-not_active);
-}
 .icon-edit {
 	@include icon(edit);
+}
+.icon-edit-not_active {
+	@include icon(edit-not_active);
 }
 .icon-list {
 	@include icon(list);
@@ -161,4 +143,22 @@
 }
 .icon-warning {
 	@include icon(warning);
+}
+.icon-account_circle-blue {
+	@include icon(account_circle-blue);
+}
+.icon-account_circle-grey {
+	@include icon(account_circle-grey);
+}
+.icon-add {
+	@include icon(add);
+}
+.icon-arrow {
+	@include icon(arrow);
+}
+.icon-bell {
+	@include icon(bell);
+}
+.icon-bell-not_active {
+	@include icon(bell-not_active);
 }
