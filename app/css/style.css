@@ -560,18 +560,24 @@ main {
             -ms-flex-item-align: end;
                 align-self: flex-end; } }
 
+.log-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .wrap {
   background: url("../img/login-bg.jpg") no-repeat;
-  background-size: cover; }
-  .wrap .flex-container {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
+  height: 100vh;
+  background-size: cover;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .login-form {
   -webkit-border-radius: 1em;
@@ -581,11 +587,22 @@ main {
   background: #fff;
   padding: 5em 2em; }
   .login-form .mail-row {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .login-form .log-icon {
     font-size: 3em;
-    width: 30px; }
+    width: 30px;
+    color: #a0a0a0; }
+  .login-form .pass-row {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .login-form input {
+    width: 100%;
     font-size: 1.8em;
     border-bottom: 0.05em solid #9e9e9e;
     color: #bdbdbd;
@@ -608,4 +625,19 @@ main {
             align-items: center; }
     .login-form .check-row label {
       font-size: 1.4em;
-      color: #bdbdbd; }
+      color: #bdbdbd;
+      vertical-align: middle; }
+    .login-form .check-row input[type="checkbox"] {
+      display: none; }
+      .login-form .check-row input[type="checkbox"] + label {
+        cursor: pointer; }
+        .login-form .check-row input[type="checkbox"] + label:before {
+          content: '';
+          display: inline-block;
+          height: 1.3em;
+          width: 1.3em;
+          background: url(../img/check_box_outline.svg);
+          margin-right: 1em;
+          vertical-align: middle; }
+      .login-form .check-row input[type="checkbox"]:checked + label:before {
+        background: url(../img/check_box.svg); }

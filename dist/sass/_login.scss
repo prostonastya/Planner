@@ -1,24 +1,17 @@
 @import "custom-variables";
 
+.log-flex{
+	display: flex;
+}
+
 .wrap{	
 	background: url('../img/login-bg.jpg') no-repeat;
-	background-size: cover;
-	.flex-container{	
-		// не могу выровнять блок 
-		// width: 100%;
-		// height: 100%;
-		// position: fixed;
-		// top: 0;
-		// left: 0;
-		justify-content: center;		
-		align-items: center;
-		// overflow: auto;
-	}
+	height: 100vh;
+	background-size: cover;				
+	justify-content: center;		
+	align-items: center;		
 }
-.login-form{
-
-    // margin-top: 370px;
-    // margin-bottom: 70px;	
+.login-form{   	
 	border-radius: 1em; 	
 	width: 29em;
 	height: 33em;
@@ -26,14 +19,18 @@
 	padding: 5em 2em;
 	.mail-row{
 		margin-bottom: 2em;
+		align-items: center;
 	}
 	.log-icon{
 		font-size: 3em;
 		width: 30px;
-		// color: #fff;
-		// background: #a0a0a0;				
+		color: #a0a0a0;						
 	}
-	input{	
+	.pass-row{
+		align-items: center;
+	}
+	input{
+		width: 100%;	
 		font-size: 1.8em;	
 		border-bottom: 0.05em solid #9e9e9e;
 		color: #bdbdbd;
@@ -57,7 +54,31 @@
 		align-items: center;
 		label{
 			font-size: 1.4em;
-			color: #bdbdbd;
+			color: #bdbdbd;	
+			vertical-align: middle;					
 		}
+		input[type="checkbox"]{
+			display: none;
+			&+ label{
+				cursor: pointer;
+				&:before{
+				content: '';
+				display: inline-block;
+				height: 1.3em;
+				width: 1.3em;
+				background: url(../img/check_box_outline.svg);
+				margin-right: 1em;
+				vertical-align: middle;
+				}
+			}
+			&:checked{
+				& + label{
+					&:before{
+						background: url(../img/check_box.svg);	
+					}
+				}
+			}
+		}
+				
 	}
 }
