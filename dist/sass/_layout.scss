@@ -163,7 +163,7 @@ main{
 
 		.task-icon{
 			font-size: 1.43em;
-			width: 20px;
+			width: 20px;			
 		}
 		.time-row{
 			align-items: center;
@@ -171,18 +171,37 @@ main{
 				width: 90%;
 				padding-left: 5px;
 			}
+			.icon-bell{
+				color: #1aabf5;
+			}
 		}
 		.text{
 			width: 90%;
 			padding-left: 5px;
 		}
 		.task-check-row{
-			align-items: center;
+			align-items: center;			
 			input[type="checkbox"] {
-    		display: none;
-    		}
-    		label{
-    			padding-left: 5px;
+	    		display: none;
+	    		&+ label{
+					cursor: pointer;
+					&:before{
+					content: '';
+					display: inline-block;
+					height: 1.43em;
+					width: 1.43em;
+					border: 1px solid #f65c20;
+					border-radius: 50%;
+					margin-right: 0.7em;					 				
+					}
+	    		}
+	   //  		&:checked{
+				// 	& + label{
+				// 		&:before{
+				// 			background: url(../img/check.svg);	
+				// 		}
+				// 	}
+				// }
     		}
 		}
 		.task-edit-row{
@@ -204,6 +223,27 @@ main{
 	align-items: center;
 }
 
+.message{
+	margin-top: 2.2em;
+	.warning-icon{
+		font-size: 3em;
+		color: #ff8248;
+		margin-right: 0.7em;
+	}
+	.warn-text{
+		font-size: 1.6em;
+		color: #ff5201;
+	}
+	.success-icon{
+		font-size: 3em;
+		color: #7cbb00;
+		margin-right: 0.7em;
+	}
+	.success-text{
+		font-size: 1.6em;
+		color: #7cbb00;
+	}
+}
 // overlay
 .overlay{	
 	background-color: rgba(0,0,0,0.83);
@@ -249,12 +289,15 @@ main{
 		font-size: 2em;
 		color: $generalColor;
 		margin-right: 1.3em;
+		@media (min-width: 1024px){			
+			margin-right: 0.62em;
+			}
 	}
 	.task-bell{
 		display: flex;
 		align-items: center;
 		font-size: 1.6em;
-		color: #404040;
+		color: #404040;		
 	}
 	input{
 		font-size: 3em;
@@ -271,16 +314,23 @@ main{
 		flex-direction: column;
 		width: 100%;
 		label{
-			font-size: 1.4em;
+			font-size: 1.2em;
 			color: #424242;
 			order: 1;
+			margin-top: 2.9em;
+			@media (min-width: 1024px){			
+			font-size: 1.4em;
+			}
 		}
 		textarea{
 			order: 2;
 			border-bottom: 1px solid #9d9d9d;
 			width: 100%;
-			min-height: 6em;
-			// zadat fz, peres4 em, 60px
+			min-height: 4.6em;
+			font-size: 1.4em;
+			@media (min-width: 1024px){			
+			width: 60%;
+				}			
 			&:focus{
 				border-color: $generalColor;
 				&+label{
@@ -291,18 +341,24 @@ main{
 		.symbol-count{
 			order: 3;
 			align-self: flex-end;
-			// margin-top: 
+			margin-top: 4em;
+			margin-bottom: 6em;
+			@media (min-width: 1024px){			
+			display: none;
+			}
 		}		
 	}
 	.add-task-btn{
 		background: $generalColor;
-		padding: 2em;
-		// proverit
+		padding: .63em 3.3em;
+		font-size: 2.4em;		
+		border-radius: 0.4em;		
 		color: #fff;
 		width: 100%;
 		@media (min-width: 1024px){
 			width: auto;
 			align-self: flex-end;
+			margin-top: 2em;
 		}
 	}
 }

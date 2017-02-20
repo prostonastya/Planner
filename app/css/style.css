@@ -393,6 +393,8 @@ main {
       .task .task-content-wrap .time-row .time {
         width: 90%;
         padding-left: 5px; }
+      .task .task-content-wrap .time-row .icon-bell {
+        color: #1aabf5; }
     .task .task-content-wrap .text {
       width: 90%;
       padding-left: 5px; }
@@ -403,8 +405,17 @@ main {
               align-items: center; }
       .task .task-content-wrap .task-check-row input[type="checkbox"] {
         display: none; }
-      .task .task-content-wrap .task-check-row label {
-        padding-left: 5px; }
+        .task .task-content-wrap .task-check-row input[type="checkbox"] + label {
+          cursor: pointer; }
+          .task .task-content-wrap .task-check-row input[type="checkbox"] + label:before {
+            content: '';
+            display: inline-block;
+            height: 1.43em;
+            width: 1.43em;
+            border: 1px solid #f65c20;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            margin-right: 0.7em; }
     .task .task-content-wrap .task-edit-row {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
@@ -433,6 +444,23 @@ main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.message {
+  margin-top: 2.2em; }
+  .message .warning-icon {
+    font-size: 3em;
+    color: #ff8248;
+    margin-right: 0.7em; }
+  .message .warn-text {
+    font-size: 1.6em;
+    color: #ff5201; }
+  .message .success-icon {
+    font-size: 3em;
+    color: #7cbb00;
+    margin-right: 0.7em; }
+  .message .success-text {
+    font-size: 1.6em;
+    color: #7cbb00; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.83);
@@ -490,6 +518,9 @@ main {
     font-size: 2em;
     color: #00a2f4;
     margin-right: 1.3em; }
+    @media (min-width: 1024px) {
+      .edit-task .icon-bell {
+        margin-right: 0.62em; } }
   .edit-task .task-bell {
     display: -webkit-box;
     display: -webkit-flex;
@@ -522,12 +553,16 @@ main {
             flex-direction: column;
     width: 100%; }
     .edit-task .textarea-wrap label {
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #424242;
       -webkit-box-ordinal-group: 2;
       -webkit-order: 1;
           -ms-flex-order: 1;
-              order: 1; }
+              order: 1;
+      margin-top: 2.9em; }
+      @media (min-width: 1024px) {
+        .edit-task .textarea-wrap label {
+          font-size: 1.4em; } }
     .edit-task .textarea-wrap textarea {
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
@@ -535,7 +570,11 @@ main {
               order: 2;
       border-bottom: 1px solid #9d9d9d;
       width: 100%;
-      min-height: 6em; }
+      min-height: 4.6em;
+      font-size: 1.4em; }
+      @media (min-width: 1024px) {
+        .edit-task .textarea-wrap textarea {
+          width: 60%; } }
       .edit-task .textarea-wrap textarea:focus {
         border-color: #00a2f4; }
         .edit-task .textarea-wrap textarea:focus + label {
@@ -547,10 +586,18 @@ main {
               order: 3;
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
-              align-self: flex-end; }
+              align-self: flex-end;
+      margin-top: 4em;
+      margin-bottom: 6em; }
+      @media (min-width: 1024px) {
+        .edit-task .textarea-wrap .symbol-count {
+          display: none; } }
   .edit-task .add-task-btn {
     background: #00a2f4;
-    padding: 2em;
+    padding: .63em 3.3em;
+    font-size: 2.4em;
+    -webkit-border-radius: 0.4em;
+            border-radius: 0.4em;
     color: #fff;
     width: 100%; }
     @media (min-width: 1024px) {
@@ -558,7 +605,8 @@ main {
         width: auto;
         -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
-                align-self: flex-end; } }
+                align-self: flex-end;
+        margin-top: 2em; } }
 
 .log-flex {
   display: -webkit-box;
@@ -586,6 +634,10 @@ main {
   height: 33em;
   background: #fff;
   padding: 5em 2em; }
+  @media (min-width: 1024px) {
+    .login-form {
+      width: 35em;
+      padding: 5em 4em; } }
   .login-form .mail-row {
     margin-bottom: 2em;
     -webkit-box-align: center;
@@ -609,20 +661,23 @@ main {
     padding: 0.8em 0.56em; }
   .login-form .button-row {
     margin-top: 4em;
-    margin-bottom: 3em; }
+    margin-bottom: 3em;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .login-form .button-row button {
       background: #00a1f1;
-      height: 2.22em;
-      width: 13.6em;
+      padding: 0.8em 5.1em;
       -webkit-border-radius: 6px;
               border-radius: 6px;
       font-size: 1.8em;
       color: #fff; }
   .login-form .check-row {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .login-form .check-row label {
       font-size: 1.4em;
       color: #bdbdbd;
