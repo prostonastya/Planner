@@ -5,11 +5,16 @@
 }
 
 .wrap{	
-	background: url('../img/login-bg.jpg') no-repeat;
+	background: url('../img/log-bg-320.jpg');
 	height: 100vh;
 	background-size: cover;				
 	justify-content: center;		
-	align-items: center;		
+	align-items: center;
+	@media (min-width: 1024px){
+		background: url('../img/login-bg.jpg');	
+		height: 100vh;
+		background-size: cover;		
+		}
 }
 .login-form{   	
 	border-radius: 1em; 	

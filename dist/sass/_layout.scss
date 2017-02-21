@@ -96,6 +96,16 @@ main{
 		bottom: 0;
 	}
 }
+.one-task-wrap{	
+	& + .one-task-wrap{
+		margin-top: 4em;
+	}	
+	flex-direction: column;
+	@media (min-width: 1024px){
+		flex-direction: row;
+		}
+}
+	
 .task{
 	width: 100%;
 	padding-left: 5.4em;
@@ -118,10 +128,7 @@ main{
 		.task-header{
 			background: $warningBg;
 		}
-	}
-	& + .task{
-		margin-top: 4em;
-	}
+	}	
 	.task-header{
 		padding: 1.5em;
 		background: $taskColor;
@@ -225,6 +232,11 @@ main{
 
 .message{
 	margin-top: 2.2em;
+	margin-left: 5.8em;
+	align-items: center;
+	@media (min-width: 1024px){
+		width: 20%;
+		}
 	.warning-icon{
 		font-size: 3em;
 		color: #ff8248;
