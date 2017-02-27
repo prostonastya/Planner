@@ -15,6 +15,12 @@
 	}
 }
 
+.blue-btn{
+	background: $generalColor;
+	border-radius: 0.4em;		
+	color: #fff;
+	width: 100%;
+}
 .add-task{
 	width: 6em;
 	height: 6em;
@@ -360,13 +366,10 @@ main{
 			}
 		}		
 	}
-	.add-task-btn{
-		background: $generalColor;
-		padding: .63em 3.3em;
-		font-size: 2.4em;		
-		border-radius: 0.4em;		
-		color: #fff;
-		width: 100%;
+
+	.blue-btn{
+		padding: 0.58em 3.33em;
+		font-size: 2.4em; 	
 		@media (min-width: 1024px){
 			width: auto;
 			align-self: flex-end;
@@ -374,3 +377,4 @@ main{
 		}
 	}
 }
+
