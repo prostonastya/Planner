@@ -151,11 +151,10 @@ main{
 			text-overflow: ellipsis;
 		}
 		.icon-arrow{
-			font-size: .6em;
+			font-size: .65em;
 		}
 		.icon-cancel{
-			font-size: 2em;
-			margin-top: -8px;
+			font-size: 1em;			
 		}
 	}
 	.task-content-wrap{
@@ -182,7 +181,7 @@ main{
 			align-items: center;
 			.time{
 				width: 90%;
-				padding-left: 5px;
+				padding-left: 15px;
 			}
 			.icon-bell{
 				color: #1aabf5;
@@ -190,7 +189,7 @@ main{
 		}
 		.text{
 			width: 90%;
-			padding-left: 5px;
+			padding-left: 15px;
 		}
 		.task-check-row{
 			align-items: center;			
@@ -198,14 +197,16 @@ main{
 	    		display: none;
 	    		&+ label{
 					cursor: pointer;
+					display: flex;
+    				align-items: center;
 					&:before{
 					content: '';
 					display: inline-block;
 					height: 1.43em;
-					width: 1.43em;
+					width: 20px;
 					border: 1px solid #f65c20;
 					border-radius: 50%;
-					margin-right: 0.7em;					 				
+					margin-right: 15px;					 				
 					}
 	    		}
 	   //  		&:checked{
@@ -219,6 +220,9 @@ main{
 		}
 		.task-edit-row{
 			justify-content: flex-end;
+			.icon-edit-not_active{
+				color: #bebebe;
+			}
 		}
 	}
 }

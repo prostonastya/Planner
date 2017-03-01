@@ -385,10 +385,9 @@ main {
       overflow: hidden;
       text-overflow: ellipsis; }
     .task .task-header .icon-arrow {
-      font-size: .6em; }
+      font-size: .65em; }
     .task .task-header .icon-cancel {
-      font-size: 2em;
-      margin-top: -8px; }
+      font-size: 1em; }
   .task .task-content-wrap {
     display: none;
     padding: 1.5em;
@@ -413,12 +412,12 @@ main {
               align-items: center; }
       .task .task-content-wrap .time-row .time {
         width: 90%;
-        padding-left: 5px; }
+        padding-left: 15px; }
       .task .task-content-wrap .time-row .icon-bell {
         color: #1aabf5; }
     .task .task-content-wrap .text {
       width: 90%;
-      padding-left: 5px; }
+      padding-left: 15px; }
     .task .task-content-wrap .task-check-row {
       -webkit-box-align: center;
       -webkit-align-items: center;
@@ -427,21 +426,31 @@ main {
       .task .task-content-wrap .task-check-row input[type="checkbox"] {
         display: none; }
         .task .task-content-wrap .task-check-row input[type="checkbox"] + label {
-          cursor: pointer; }
+          cursor: pointer;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
           .task .task-content-wrap .task-check-row input[type="checkbox"] + label:before {
             content: '';
             display: inline-block;
             height: 1.43em;
-            width: 1.43em;
+            width: 20px;
             border: 1px solid #f65c20;
             -webkit-border-radius: 50%;
                     border-radius: 50%;
-            margin-right: 0.7em; }
+            margin-right: 15px; }
     .task .task-content-wrap .task-edit-row {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
+      .task .task-content-wrap .task-edit-row .icon-edit-not_active {
+        color: #bebebe; }
 
 .to-do-time {
   width: 3.33em;
